@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="content">
+        <%# console.log(posts) %>
+        <% for (let i=0; i<posts.length; i++) { %>
+            <div class="ccard">
+                <div class="card-top">
+                    <h4>
+                        <%=  posts[i].title %><br>
+                    </h4> 
+                    <p>
+                        <%=  posts[i].time %>
+                    </p>  
+                </div>
+                <hr>
+                <div class="card-middle">
+                    <p>
+                        <%=  posts[i].content %> 
+                    </p>   
+                </div>
+                <div class="card-bottom">
+                    <p>
+                        ~ <%= posts[i].author %>
+                    </p>
+                </div>
+            </div>
+        <% } %>
+        
+    </div>    
+
+<%- include('partials/footer.ejs') %>

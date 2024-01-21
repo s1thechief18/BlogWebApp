@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="content">
+        <form class="form" action="/edit_form" method="post">
+            <input type="hidden" name="id" value="<%= posts[0].id %>">
+            <input class="input-title" type="text" id="title" name="title" value="<%= posts[0].title %>"><br>
+            <textarea class="input-content" id="content" name="content" maxlength="200"><%= posts[0].content %></textarea><br>
+            <input class="input-author" type="text" id="author" name="author" value="<%= posts[0].author %>"><br>
+            <input type="hidden" name="time" value="<%= posts[0].time %>">
+            <input class="btn btn-success mt-4" type="submit" value="Save">
+        </form>
+    </div>    
+
+<%- include('partials/footer.ejs') %>
